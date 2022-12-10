@@ -1,0 +1,25 @@
+.song {
+    &-container {
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    &-banner {
+        width: 300px;
+        border-radius: 45px;
+        margin-bottom: 40px;
+    }
+
+    &-artist {
+        margin-bottom: 50px;
+        color: rgba($color: #000000, $alpha: 0.5);
+        font-weight: 600;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}

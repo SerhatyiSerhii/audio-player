@@ -1,0 +1,43 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.audio-list {
+    width: 500px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 5px;
+    color: rgba($color: #000000, $alpha: 0.5);
+
+    .name {
+        color: rgba($color: #000000, $alpha: 0.8);
+        font-size: 20px;
+    }
+
+    .artist {
+        font-size: 10px;
+    }
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    &.active {
+        background-color: lightblue;
+    }
+}
+
+.audio-cover {
+    width: 75px;
+    margin-right: 10px;
+}
+
+.library {
+    color: rgba($color: #000000, $alpha: 1.0);
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
