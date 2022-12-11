@@ -14,7 +14,7 @@ function AudioPlayerControllersComponent({ audio, selectNextSong, selectPrevSong
     const totalBarRef = useRef();
     const totalTimeRef = useRef();
 
-    function playSong() {
+    const playSong = () => {
         if (!isPlaying) {
             audioRef.current.addEventListener('ended', endAudioHandler);
             audioRef.current.addEventListener('timeupdate', timeUpdateHandler);
@@ -28,7 +28,7 @@ function AudioPlayerControllersComponent({ audio, selectNextSong, selectPrevSong
         }
     }
 
-    function pickTimeOnBar(event) {
+    const pickTimeOnBar = (event) => {
         const barWidth = totalBarRef.current.clientWidth;
         const inBarXCoor = currentSongPositionRef.current.getBoundingClientRect().left;
         const inBarPosition = ((event.pageX - inBarXCoor) / barWidth) * 100;
@@ -39,7 +39,7 @@ function AudioPlayerControllersComponent({ audio, selectNextSong, selectPrevSong
         timeUpdateHandler();
     }
 
-    function calculateTime(bool) {
+    const calculateTime = (bool) => {
         const min = Math.floor((bool ? audioRef.current.currentTime : audioRef.current.duration) / 60);
         const sec = Math.floor((bool ? audioRef.current.currentTime : audioRef.current.duration) % 60);
 
