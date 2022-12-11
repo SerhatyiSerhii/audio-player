@@ -5,10 +5,8 @@ import AudioPlayerSongComponent from "../audio-player-song/audio-player-song";
 import './audio-player.scss';
 
 function AudioPlayerComponent() {
-    const audioData = chillHop();
-
     const [activeAudio, setActiveAudio] = useState();
-    const [audioList, setAudioList] = useState(audioData);
+    const [audioList, setAudioList] = useState(chillHop());
 
     useEffect(() => {
         const activeSong = audioList.slice(0).find(song => song.active);
